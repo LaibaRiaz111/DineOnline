@@ -18,6 +18,7 @@ function Indianfood(){
   
       fetchData();
     }, []);
+    console.log(food, 'food1');
     const dispatch=useDispatch()
     let Food1=food.filter((ele)=>ele.titlename==='IndianFood');
     let history=useHistory();
@@ -55,6 +56,7 @@ function Indianfood(){
         <div className="card-image" >
             {  
                 Food1.map((ele)=>{
+                    console.log(ele, 'ele')
                     return <>
                      <div key={ele.id} className='Perslide' >
                     <img src={ele.url} alt={ele.title} onClick={()=>detail(ele.id)}></img>
