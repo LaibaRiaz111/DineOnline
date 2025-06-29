@@ -50,7 +50,8 @@ useEffect(() => {
     }
     let query = new URLSearchParams(location.search)
     function order(){
-        history.push('/cart')
+        dispatch(addTocart(detail));
+        history.push('/order')
     }
     return(
         <>

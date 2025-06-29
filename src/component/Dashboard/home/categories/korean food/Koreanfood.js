@@ -52,16 +52,15 @@ function Koreanfood(){
                 <button className="rightImageArrowStyles" onClick={()=>nextImage()}> ❱❱</button>
             <div className="korean-card-image" >
                 {  
-                    Food3.map((ele)=>{
-                        return <>
-                         <div key={ele.id} className='Perslide'>
-                        <img src={ele.url} alt={ele.title} onClick={()=>detail(ele.id)}></img>
-                        <p>{ele.title}{' '}[{ele.quantity}] </p>
-                        <span style={{display:'block'}}>₹{ele.rate}</span>
-                        <button className="slide-cart-button" onClick={order}>Order</button>{'  '}<button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>+Add toCart</button>
-                    </div>
-                     </>
-                    })
+                    Food3.map((ele)=>(
+                        <div key={ele.id} className='Perslide'>
+                            <img src={ele.url} alt={ele.title} onClick={()=>detail(ele.id)}></img>
+                            <p>{ele.title}{' '}[{ele.quantity}] </p>
+                            <span style={{display:'block'}}>₹{ele.rate}</span>
+                            <button className="slide-cart-button" onClick={order}>Order</button>
+                            <button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>+Add toCart</button>
+                        </div>
+                    ))
                 }
                 <button onClick={()=>Alldish(Food3[0].titleId) } className='imsa' >See more</button>
             </div>

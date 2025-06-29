@@ -29,8 +29,7 @@ function Cart(){
         dispatch(clearCartItem())
     }
     function order(){
-        alert('Your order placed successfully!!')
-        dispatch(clearCartItem())
+        history.push('/order')
     }
     return(
         <div className="cart-bg">

@@ -40,8 +40,9 @@ function Alldish(){
     function detailed(id){
         history.push(`/singledish?id=${id}`)
     }
-    function order(){
-        history.push('/cart')
+    function order(ele){
+        dispatch(addTocart(ele));
+        history.push('/order')
     }
     function AddtoCart(ele){
         dispatch(addTocart(ele))
@@ -57,7 +58,7 @@ function Alldish(){
                     <img src={ele.url} alt={ele.title} onClick={()=>detailed(ele.id)}></img>
                     <p>{ele.title}{' '}[{ele.quantity}]</p>
                     <span style={{display:'block'}}>₹{ele.rate}</span>
-                    <button className="slide-cart-button" onClick={order}>Order</button>{'  '}<button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>+Add toCart</button>
+                    <button className="slide-cart-button" onClick={() => order(ele)}>Order</button>{'  '}<button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>+Add toCart</button>
                 </div>
                 
                 })

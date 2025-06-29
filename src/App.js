@@ -8,6 +8,7 @@ import Cart from './component/Dashboard/cart/cart';
 import Singledish from './component/Dashboard/home/categories/singledish';
 import Alldish from './component/Dashboard/All dish/alldish';
 import Profile from './component/Dashboard/profile/profile';
+import Order from './component/Dashboard/order/Order';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { getTotals } from './component/Dashboard/cart/cartslice';
@@ -27,6 +28,7 @@ function App() {
         <Route path='/singledish'> <Singledish /></Route>
         <Route path='/alldish'> <Alldish /></Route>
         <Route path='/profile'> <Profile /></Route>
+        <Route path='/order'> <Order /></Route>
       </Switch>
       </Provider>
       </BrowserRouter>
